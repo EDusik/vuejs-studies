@@ -53,6 +53,13 @@
     <div class="box" @mousemove="handleMouseMove">
       position: {{ x }}, {{ y }}
     </div>
+    <br />
+    <ul v-if="showBooks">
+      <li v-for="book in books">
+        <h3>{{book.title}}</h3>
+        <p>{{book.author}}</p>
+      </li>
+    </ul> 
   </div>
 
   <script src="app.js">

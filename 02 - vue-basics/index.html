@@ -22,6 +22,9 @@
   <h1>Hello Vue :)</h1>
 
   <div id="app">
+
+    <a v-bind:href="url" target="_blank">best website ever</a>
+
     <div v-if="showBooks">
       <p>{{ title }} - {{ author }} - {{ age }} </p>
     </div>
@@ -54,8 +57,11 @@
       position: {{ x }}, {{ y }}
     </div>
     <br />
+
     <ul v-if="showBooks">
+  
       <li v-for="book in books">
+        <img :src="book.img" :alt="book.title" img: />
         <h3>{{book.title}}</h3>
         <p>{{book.author}}</p>
       </li>

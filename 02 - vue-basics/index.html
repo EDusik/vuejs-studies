@@ -7,7 +7,34 @@
   <title>Learning Vue</title>
   <script src="https://cdn.jsdelivr.net/npm/vue@3.0.2"></script>
 
-  <style>
+  <style> 
+    body {
+      background: #eee;
+      max-width: 960px;
+      margin: 20px auto;
+    }
+
+    li {
+      list-style-type: none;
+      background: #fff;
+      margin: 20px auto;
+      padding: 10px 20px;
+      border-radius: 10px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+
+    li.fav{
+      background: #ff9ed2;
+      color: white;
+    }
+
+    p, h3, ul {
+      margin: 0;
+      padding: 0;
+    }
+
     .box {
       padding: 100px 0;
       width: 400px;
@@ -58,9 +85,8 @@
     </div>
     <br />
 
-    <ul v-if="showBooks">
-  
-      <li v-for="book in books">
+    <ul v-if="showBooks">  
+      <li v-for="book in books" :class="{ fav: book.isFav }">
         <img :src="book.img" :alt="book.title" img: />
         <h3>{{book.title}}</h3>
         <p>{{book.author}}</p>

@@ -15,7 +15,15 @@
       <p>grab your ninja</p>
     </Modal>
   </div>
+
+  <div v-if="showModalTwo">
+    <Modal @close="toggleModalTwo">
+      <h1>Sign up to the newsletter</h1>
+      <p>For updates and promo codes!</p>
+    </Modal>
+  </div>
   <button @click="toggleModal">show modal</button> 
+  <button @click="toggleModalTwo">show modal 2</button> 
 </template>
 
 <script>
@@ -29,7 +37,8 @@ export default {
       title: "My first Vue App :)",
       header: "Sign up for the Giveway!",
       text: "Grab the ninja",
-      showModal: false
+      showModal: false,
+      showModalTwo: false
     }
   },
   methods: {
@@ -40,6 +49,9 @@ export default {
     },
     toggleModal() {
       this.showModal = !this.showModal;
+    },
+    toggleModalTwo() {
+      this.showModalTwo = !this.showModalTwo;
     }
   }
 }

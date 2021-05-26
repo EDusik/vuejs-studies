@@ -5,7 +5,15 @@
   <button @click="handleClick">click me</button> -->
   <p>Welcome...</p>
   <div v-if="showModal">
-    <Modal :header="header" :text="text" theme="sale" @close="toggleModal" />  
+    <!-- <Modal :header="header" :text="text" theme="sale" @close="toggleModal" />   -->
+    <Modal @close="toggleModal" theme="sale">
+      <template v-slot:links>
+        <a href="#">sign up now</a><br />
+        <a href="#">more info</a>
+      </template>
+      <h1>Ninja Givaway</h1>
+      <p>grab your ninja</p>
+    </Modal>
   </div>
   <button @click="toggleModal">show modal</button> 
 </template>

@@ -11,7 +11,7 @@ Vue.createApp, v-if, v-for, v-on:click, @click, @mouse, data(), methods.
 ```
 #### /03-the-vue-cli
 * 03-the-vue-cli (For Bigger Projects)\
-modal project made using `vue create modal-project`.
+Modal project made using `vue create modal-project`.
 
 #### /04-project-build
 * 04-project-build - Reaction Timer\

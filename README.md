@@ -7,11 +7,12 @@ Vue.js studies based on <a href="https://www.udemy.com/course/build-web-apps-wit
 * 02-vue-basics\
 Vue.Js basics
 ```vuejs 
-Vue.createApp, v-if, v-for, v-on:click, @click, @mouse, data(), methods
+Vue.createApp, v-if, v-for, v-on:click, @click, @mouse, data(), methods.
 ```
 #### /03-the-vue-cli
 * 03-the-vue-cli (For Bigger Projects)\
-modal project made using `vue create modal-project` 
+modal project made using `vue create modal-project`.
 
 #### /04-project-build
-* 04-project-build - Reaction Timer
+* 04-project-build - Reaction Timer\
+Simple Vue.js game to test the player's reflexes.

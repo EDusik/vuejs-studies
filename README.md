@@ -4,15 +4,14 @@ Vue.js studies based on <a href="https://www.udemy.com/course/build-web-apps-wit
 
 ## :file_folder: Folders
 #### /02-vue-basics
-* 02-vue-basics\
-Vue.Js basics
-```vuejs 
-Vue.createApp, v-if, v-for, v-on:click, @click, @mouse, data(), methods.
-```
+* challenge-add-to-favs\
+Some basic vue commands like: Vue.createApp, v-if, v-for, v-on:click, @click, @mouse, data(), methods.
 #### /03-the-vue-cli
-* 03-the-vue-cli (For Bigger Projects)\
+* modal-project\
 Modal project made using `vue create modal-project`.
-
 #### /04-project-build
-* 04-project-build - Reaction Timer\
+* reaction-timer\
 Simple Vue.js game to test the player's reflexes.
+#### /05-forms-data-binding
+* web-form
+Example of form and data binding using v-model.

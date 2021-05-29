@@ -13,5 +13,5 @@ Modal project made using `vue create modal-project`.
 * reaction-timer\
 Simple Vue.js game to test the player's reflexes.
 #### /05-forms-data-binding
-* web-form
+* web-form\
 Example of form and data binding using v-model.

@@ -20,5 +20,8 @@ Example of form and data binding using v-model.
 Example of how to use router.
 #### /07-fetching-data
 * ninja-jobs\
-Example of how to fetch data using json server
+Example of how to fetch data using json server.
+#### /08-project-build
+* project-planner\
+Simple Vue.js project planner.
 

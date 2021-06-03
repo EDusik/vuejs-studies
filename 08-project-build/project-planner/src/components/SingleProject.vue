@@ -3,9 +3,9 @@
     <div class="actions">
       <h3 @click="showDetails = !showDetails">{{project.title}}</h3>
       <div class="icons">
-        <span class="material-icons">edit</span>
-        <span class="material-icons">delete</span>
-        <span class="material-icons">done</span>
+        <span @click="editProject" class="material-icons">edit</span>
+        <span @click="deletetProject" class="material-icons">delete</span>
+        <span @click="completeProject" class="material-icons">done</span>
       </div>
     </div>
     <div v-if="showDetails" class="details">
@@ -19,7 +19,15 @@ export default {
   props: ['project'],
   data() {
     return{
-      showDetails: false
+      showDetails: false,
+      uri: `http://localhost:3000/projects/${this.project.id}`
+    }
+  },
+  methods: {
+    deletetProject() {
+      fetch(this.uri, { method: 'DELETE' })
+        .then(() => this.$emit('delete', this.project.id))
+        .catch(err => console.log(err));
     }
   }
 }

@@ -1,19 +1,19 @@
 # ninja-jobs
+## Dependencies
+```
+npm install json-server
+```
 
 ## Project setup
 ```
 npm install
 ```
 
-### Compiles and hot-reloads for development
+### Run the project
 ```
 npm run serve
+json-server --watch data/db.json
+
+[http://localhost:3000/jobs](http://localhost:3000/jobs "localhost")
 ```
 
-### Compiles and minifies for production
-```
-npm run build
-```
-
-### Customize configuration
-See [Configuration Reference](https://cli.vuejs.org/config/).

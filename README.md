@@ -18,3 +18,7 @@ Example of form and data binding using v-model.
 #### /06-router-basics
 * ninja-jobs\
 Example of how to use router.
+#### /07-fetching-data
+* ninja-jobs\
+Example of how to fetch data using json server
+

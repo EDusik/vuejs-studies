@@ -4,10 +4,17 @@
   <button @click="handleClick">click me</button>
   <button @click="age++">add one to age</button>
   <input type="text" v-model="name" />
+  <br />
+  <p>{{ninjaOne.name}} - {{ninjaOne.age}}</p>
+  <button @click="updateNinjaOne">updateNinjaOne</button>
+  <br />
+  <h2>Reactive</h2>
+  <p>{{ninjaTwo.name}} - {{ninjaTwo.age}}</p>
+  <button @click="updateNinjaTwo">updateNinjaTwo</button>
 </template>
 
 <script>
-import { ref } from 'vue'
+import { ref, reactive } from 'vue'
 
 export default {
   name: 'Home',
@@ -17,6 +24,18 @@ export default {
 
     const name = ref('Eduardo')
     const age = ref(31)
+
+    const ninjaOne = ref({ name: 'edu', age: 30 })
+    const ninjaTwo = reactive({ name: 'dudu', age: 31})
+
+    const updateNinjaOne = () => {
+      ninjaOne.value.age = 40;
+    }
+
+    const updateNinjaTwo = () => {
+      ninjaTwo.age = 32;
+    }
+
 
     const handleClick = () => {
       // console.log(p, p.value)
@@ -30,6 +49,10 @@ export default {
       name,
       age, 
       handleClick,
+      ninjaOne,
+      updateNinjaOne,
+      ninjaTwo,
+      updateNinjaTwo
     }
   }
 }

@@ -1,6 +1,9 @@
 <template>
   <h1>Home</h1>
-  <p>My name is {{ name }} and my age is {{ age }} </p>
+  <input type="text" v-model="search">
+  <p>search term - {{ search }}</p>
+  <div v-for="name in matchingNames" :key="name">{{ name }}</div>
+  <!-- <p>My name is {{ name }} and my age is {{ age }} </p>
   <button @click="handleClick">click me</button>
   <button @click="age++">add one to age</button>
   <input type="text" v-model="name" />
@@ -10,11 +13,11 @@
   <br />
   <h2>Reactive</h2>
   <p>{{ninjaTwo.name}} - {{ninjaTwo.age}}</p>
-  <button @click="updateNinjaTwo">updateNinjaTwo</button>
+  <button @click="updateNinjaTwo">updateNinjaTwo</button> -->
 </template>
 
 <script>
-import { ref, reactive } from 'vue'
+import { ref, reactive, computed } from 'vue'
 
 export default {
   name: 'Home',
@@ -22,38 +25,49 @@ export default {
 
     // const p = ref(null);
 
-    const name = ref('Eduardo')
-    const age = ref(31)
+    // const name = ref('Eduardo')
+    // const age = ref(31)
 
-    const ninjaOne = ref({ name: 'edu', age: 30 })
-    const ninjaTwo = reactive({ name: 'dudu', age: 31})
+    // const ninjaOne = ref({ name: 'edu', age: 30 })
+    // const ninjaTwo = reactive({ name: 'dudu', age: 31})
 
-    const updateNinjaOne = () => {
-      ninjaOne.value.age = 40;
-    }
+    // const updateNinjaOne = () => {
+    //   ninjaOne.value.age = 40;
+    // }
 
-    const updateNinjaTwo = () => {
-      ninjaTwo.age = 32;
-    }
+    // const updateNinjaTwo = () => {
+    //   ninjaTwo.age = 32;
+    // }
 
+    // const name = computed(() => {
+    //   return 'Eduardo Dusik'
+    // })
 
-    const handleClick = () => {
-      // console.log(p, p.value)
-      // p.value.classList.add('test')
-      // p.value.textContent = 'Hello, ninjas!'
-      name.value = 'Eduardo Dusik'
-      age.value = 32
-    }
+    const search = ref('')
+    const names = ref(['mario', 'yoshi', 'luigi', 'toad', 'bowser', 'koopa', 'peach'])
+    // const handleClick = () => {
+    //   // console.log(p, p.value)
+    //   // p.value.classList.add('test')
+    //   // p.value.textContent = 'Hello, ninjas!'
+    //   name.value = 'Eduardo Dusik'
+    //   age.value = 32
+    // }
 
-    return {
-      name,
-      age, 
-      handleClick,
-      ninjaOne,
-      updateNinjaOne,
-      ninjaTwo,
-      updateNinjaTwo
-    }
+  const matchingNames = computed(() => {
+      // return ['a', 'b', 'c']
+      return names.value.filter(name => name.includes(search.value))
+    })
+    return { names, search, matchingNames }
+
+    // return {
+    //   name,
+    //   // age, 
+    //   // handleClick,
+    //   // ninjaOne,
+    //   // updateNinjaOne,
+    //   // ninjaTwo,
+    //   // updateNinjaTwo
+    // }
   }
 }
 </script>

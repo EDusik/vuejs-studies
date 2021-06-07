@@ -24,4 +24,6 @@ Example of how to fetch data using json server.
 #### /08-project-build
 * project-planner\
 Simple Vue.js project planner.
-
+#### /09-composition-api
+* dojo-blog\
+Simple Vue.js blog using The Composition API.

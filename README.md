@@ -27,3 +27,6 @@ Simple Vue.js project planner.
 #### /09-composition-api
 * dojo-blog\
 Simple Vue.js blog using The Composition API.
+#### /10-async-code
+* dojo-blog\
+Simple Vue.js blog using The Composition API.

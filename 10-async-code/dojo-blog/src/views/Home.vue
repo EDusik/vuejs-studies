@@ -9,30 +9,15 @@
 
 <script>
 import PostList from '../components/PostList.vue'
-import { ref } from 'vue'
+import getPosts from '../composables/getPosts'
 
 export default {
   name: 'Home',
   components: { PostList },
   setup() {
-    const posts = ref([])
-    const error = ref(null)
+    const { posts, error, load } = getPosts();
 
-    const load = async () => {
-      try {
-        const data = await fetch('http://localhost:3000/posts')
-        if (!data.ok) {
-          throw new Error('no data available')
-        }
-
-        posts.value = await data.json();
-      }
-      catch (err) {
-        error.value = err.message
-      }
-    }
-
-    load()
+    load();
 
     return { posts, error }
   }

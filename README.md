@@ -30,3 +30,6 @@ Simple Vue.js blog using The Composition API.
 #### /10-async-code
 * dojo-blog\
 Simple Vue.js blog using The Composition API.
+#### /11-routing-composition-api
+* dojo-blog\
+Simple Vue.js blog using The Composition API.

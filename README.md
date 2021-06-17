@@ -29,7 +29,11 @@ Simple Vue.js project planner.
 Simple Vue.js blog using The Composition API.
 #### /10-async-code
 * dojo-blog\
-Simple Vue.js blog using The Composition API.
+Simple Vue.js blog using The Composition API with async code
 #### /11-routing-composition-api
 * dojo-blog\
-Simple Vue.js blog using The Composition API.
+Simple Vue.js blog using The Composition API with async code and routing
+#### /12-firebase-databases-firestore
+* dojo-blog\
+Simple Vue.js blog using The Composition API with async code, routing and firebase
+
